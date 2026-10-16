@@ -4,6 +4,7 @@ import "./globals.css";
 import { site } from "@/lib/site";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
 import { MotionProvider } from "@/components/animations/MotionProvider";
 
 const geistSans = Geist({
@@ -96,6 +97,7 @@ export default function RootLayout({
           <Navbar />
           <div className="flex-1">{children}</div>
           <Footer />
+          <FloatingWhatsApp />
         </MotionProvider>
       </body>
     </html>

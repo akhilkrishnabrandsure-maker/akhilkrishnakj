@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowUp, Mail } from "lucide-react";
 import { site, navItems } from "@/lib/site";
 import { Monogram } from "@/components/ui/Monogram";
-import { SocialIcon } from "@/components/ui/BrandIcons";
+import { SocialIcon, WhatsAppIcon } from "@/components/ui/BrandIcons";
 
 export function Footer() {
   const [currentYear, setCurrentYear] = useState(2026);
@@ -76,23 +76,26 @@ export function Footer() {
               Ready to grow your search visibility or streamline repetitive workflows?
             </p>
 
-            {site.email ? (
+            <div className="flex flex-col gap-2">
+              {site.email && (
+                <a
+                  href={`mailto:${site.email}`}
+                  className="inline-flex items-center gap-2 text-sm font-mono text-lime hover:underline"
+                >
+                  <Mail className="size-4" />
+                  <span>{site.email}</span>
+                </a>
+              )}
               <a
-                href={`mailto:${site.email}`}
+                href={site.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-mono text-lime hover:underline"
               >
-                <Mail className="size-4" />
-                <span>{site.email}</span>
+                <WhatsAppIcon className="size-4 fill-current text-[#25D366]" />
+                <span>WhatsApp: +91 {site.whatsappNumber}</span>
               </a>
-            ) : (
-              <Link
-                href="/#contact"
-                className="inline-flex items-center gap-2 text-sm font-mono text-lime hover:underline"
-              >
-                <Mail className="size-4" />
-                <span>Send a project message</span>
-              </Link>
-            )}
+            </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-2">

@@ -43,11 +43,14 @@ export const site = {
   resumeUrl: null as string | null, // e.g. "/resume.pdf" (place file in /public)
   location: null as string | null, // e.g. "Kerala, India" — only if you want it public
 
+  whatsappNumber: "9778798091",
+  whatsappUrl: "https://wa.me/919778798091",
+
   social: [
     { id: "linkedin", label: "LinkedIn", href: null },
-    { id: "github", label: "GitHub", href: null },
+    { id: "github", label: "GitHub", href: "https://github.com/akhilkrishnabrandsure-maker" },
     // WhatsApp format: https://wa.me/<countrycode><number>
-    { id: "whatsapp", label: "WhatsApp", href: null },
+    { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/919778798091" },
   ] satisfies SocialLink[] as SocialLink[],
 
   availability: {

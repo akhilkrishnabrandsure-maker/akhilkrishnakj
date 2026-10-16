@@ -144,13 +144,15 @@ export function Navbar() {
 
           {/* Right Action CTA & Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/#contact"
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 rounded-full border border-lime/30 bg-lime/[0.08] px-4 py-1.5 text-xs font-medium text-lime transition-all duration-300 hover:bg-lime hover:text-[#0b0d06] hover:shadow-[0_0_20px_rgba(183,243,74,0.4)]"
             >
               <span>Let&apos;s Talk</span>
               <ArrowUpRight className="size-3.5" />
-            </Link>
+            </a>
 
             {/* Mobile Menu Toggle Button */}
             <button
@@ -203,14 +205,16 @@ export function Navbar() {
               <span>{site.availability.label}</span>
             </div>
           )}
-          <Link
-            href="/#contact"
+          <a
+            href={site.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMobileOpen(false)}
             className="flex items-center justify-center gap-2 rounded-xl bg-lime py-3 text-sm font-semibold text-[#0b0d06] shadow-[0_0_20px_rgba(183,243,74,0.3)]"
           >
-            <span>Let&apos;s Work Together</span>
+            <span>Let&apos;s Talk on WhatsApp</span>
             <ArrowUpRight className="size-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </>
